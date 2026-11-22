@@ -1,12 +1,10 @@
 class Solution:
     def reverseList(self, head: ListNode | None) -> ListNode | None:
         prev = None
-        current = head
-
-        while current:
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
-
+        temp = head
+        while temp:
+            next_node = temp.next
+            temp.next = prev
+            prev = temp
+            temp = next_node
         return prev
